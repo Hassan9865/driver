@@ -1,6 +1,7 @@
 import 'package:driver/view/home/home_viewModel.dart';
 import 'package:driver/view/home/widget/my_drawer.dart';
 import 'package:driver/view/home/widget/trip_card.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
@@ -42,7 +43,8 @@ class HomeView extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Current location',
+                              AppLocalizations.of(context)!.currentLocation,
+
                               style: TextStyle(color: Colors.grey),
                             ),
                             Row(
@@ -53,7 +55,10 @@ class HomeView extends StatelessWidget {
                                 ),
 
                                 Text(
-                                  'Riyadh, Swedish district...',
+                                  AppLocalizations.of(
+                                    context,
+                                  )!.riyadhSwedishDistrict,
+
                                   style: TextStyle(
                                     color: Color(0xff6b8e23),
                                     fontWeight: FontWeight.bold,
@@ -78,7 +83,8 @@ class HomeView extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     child: Text(
-                      'Your suggestions',
+                      AppLocalizations.of(context)!.yourSuggestions,
+
                       style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
                   ),
@@ -100,7 +106,8 @@ class HomeView extends StatelessWidget {
                           borderRadius: BorderRadius.circular(6),
                         ),
                         child: Text(
-                          'Shared trip (with girls)',
+                          AppLocalizations.of(context)!.sharedTripWithGirls,
+
                           style: TextStyle(
                             color: Colors.grey,
                             // fontSize: bodySize,
@@ -122,7 +129,8 @@ class HomeView extends StatelessWidget {
                           borderRadius: BorderRadius.circular(6),
                         ),
                         child: Text(
-                          'Solo trip (done)',
+                          AppLocalizations.of(context)!.soloTripDone,
+
                           style: TextStyle(color: Colors.grey),
                         ),
                       ),

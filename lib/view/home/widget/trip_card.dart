@@ -1,5 +1,6 @@
 import 'package:driver/view/home/widget/info_container.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class TripCard extends StatelessWidget {
   const TripCard({super.key});
@@ -49,7 +50,8 @@ class TripCard extends StatelessWidget {
                         children: [
                           Center(
                             child: Text(
-                              'Monthly trip details',
+                              AppLocalizations.of(context)!.monthlyTripDetails,
+
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: titleSize,
@@ -62,7 +64,8 @@ class TripCard extends StatelessWidget {
                             children: [
                               Flexible(
                                 child: infoContainer(
-                                  'From Swedish ne..',
+                                  AppLocalizations.of(context)!.fromSwedish,
+
                                   bodySize,
                                   maxLines: 1,
                                 ),
@@ -70,7 +73,8 @@ class TripCard extends StatelessWidget {
                               const SizedBox(width: 8),
                               Flexible(
                                 child: infoContainer(
-                                  'To the Saudi El..',
+                                  AppLocalizations.of(context)!.toSaudi,
+
                                   bodySize,
                                   maxLines: 1,
                                 ),
@@ -83,11 +87,17 @@ class TripCard extends StatelessWidget {
                           Row(
                             children: [
                               Flexible(
-                                child: infoContainer('From 8:30 AM', bodySize),
+                                child: infoContainer(
+                                  AppLocalizations.of(context)!.from830am,
+                                  bodySize,
+                                ),
                               ),
                               const SizedBox(width: 8),
                               Flexible(
-                                child: infoContainer('Until 3:30 PM', bodySize),
+                                child: infoContainer(
+                                  AppLocalizations.of(context)!.until330pm,
+                                  bodySize,
+                                ),
                               ),
                             ],
                           ),
@@ -95,7 +105,8 @@ class TripCard extends StatelessWidget {
 
                           // Seat info
                           infoContainer(
-                            '2 out of 4 seats available',
+                            AppLocalizations.of(context)!.seatsAvailable,
+
                             bodySize,
                             maxLines: 2,
                           ),
@@ -116,7 +127,8 @@ class TripCard extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(6),
                                   ),
                                   child: Text(
-                                    'Book now',
+                                    AppLocalizations.of(context)!.bookNow,
+
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: bodySize,
@@ -127,7 +139,8 @@ class TripCard extends StatelessWidget {
                               const SizedBox(width: 8),
                               Flexible(
                                 child: infoContainer(
-                                  '1500 riyals/month',
+                                  AppLocalizations.of(context)!.monthlyFare,
+
                                   bodySize,
                                 ),
                               ),
@@ -160,14 +173,16 @@ class TripCard extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'The driver',
+                                      AppLocalizations.of(context)!.theDriver,
+
                                       style: TextStyle(
                                         color: Colors.white70,
                                         fontSize: bodySize,
                                       ),
                                     ),
                                     Text(
-                                      'Mohammed',
+                                      AppLocalizations.of(context)!.mohammed,
+
                                       overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
                                         color: Colors.white,
@@ -204,14 +219,16 @@ class TripCard extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'Age:',
+                                      AppLocalizations.of(context)!.age,
+
                                       style: TextStyle(
                                         color: Colors.white70,
                                         fontSize: smallSize,
                                       ),
                                     ),
                                     Text(
-                                      '40 years',
+                                      AppLocalizations.of(context)!.fortyYears,
+
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: smallSize,
@@ -226,14 +243,16 @@ class TripCard extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'Nationality',
+                                      AppLocalizations.of(context)!.nationality,
+
                                       style: TextStyle(
                                         color: Colors.white70,
                                         fontSize: smallSize,
                                       ),
                                     ),
                                     Text(
-                                      'Pakistani',
+                                      AppLocalizations.of(context)!.pakistani,
+
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: smallSize,
@@ -248,7 +267,8 @@ class TripCard extends StatelessWidget {
 
                           // Car Info
                           Text(
-                            'The car',
+                            AppLocalizations.of(context)!.theCar,
+
                             style: TextStyle(
                               color: Colors.white70,
                               fontSize: bodySize,

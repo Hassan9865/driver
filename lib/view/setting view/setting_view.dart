@@ -1,4 +1,5 @@
 import 'package:driver/view/setting%20view/setting_viewmodel.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
@@ -15,7 +16,7 @@ class SettingView extends StatelessWidget {
           appBar: AppBar(
             backgroundColor: Colors.blueGrey[400],
             title: Text(
-              "AppLocalizations.of(context)!.setting,",
+              AppLocalizations.of(context)!.setting,
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
@@ -24,7 +25,9 @@ class SettingView extends StatelessWidget {
             centerTitle: true,
             elevation: 0,
             leading: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                viewModel.navigateTobottomnavbar();
+              },
               icon: Icon(Icons.arrow_back, color: Colors.black),
             ),
           ),
@@ -78,7 +81,7 @@ class SettingView extends StatelessWidget {
                           items: viewModel.languageItems,
                           onChanged: (language? newValue) {
                             if (newValue != null) {
-                              // viewModel.setLanguage(newValue);
+                              viewModel.setLanguage(newValue);
                             }
                           },
                           underline: const SizedBox(),

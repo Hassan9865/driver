@@ -5,6 +5,8 @@ import 'package:driver/view/home/home_view.dart';
 import 'package:driver/view/my_account/my_account_view.dart';
 import 'package:driver/view/track_driver/track_driver_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 import 'package:stacked/stacked.dart';
 
 class BottomNavbarView extends StatelessWidget {
@@ -23,28 +25,28 @@ class BottomNavbarView extends StatelessWidget {
               children: [
                 SpotlightNavItem(
                   icon: Icons.home,
-                  label: 'home',
+                  label: AppLocalizations.of(context)!.home,
                   isSelected: model.currentIndex == 0,
                   index: 0,
                   onTap: () => model.setIndex(0),
                 ),
                 SpotlightNavItem(
                   icon: Icons.calendar_today,
-                  label: 'My Bookings',
+                  label: AppLocalizations.of(context)!.mybooking,
                   isSelected: model.currentIndex == 1,
                   index: 1,
                   onTap: () => model.setIndex(1),
                 ),
                 SpotlightNavItem(
                   icon: Icons.local_taxi,
-                  label: 'Track Driver',
+                  label: AppLocalizations.of(context)!.trackdriver,
                   isSelected: model.currentIndex == 2,
                   index: 2,
                   onTap: () => model.setIndex(2),
                 ),
                 SpotlightNavItem(
                   icon: Icons.person,
-                  label: 'My Account',
+                  label: AppLocalizations.of(context)!.myaccount,
                   isSelected: model.currentIndex == 3,
                   index: 3,
                   onTap: () => model.setIndex(3),
